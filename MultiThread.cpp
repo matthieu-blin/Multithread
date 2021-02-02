@@ -17,6 +17,7 @@ struct V2
 		m.lock();
 		x = _x;
 		y = _y; 
+		m.unlock();
 	}
 	void Get(float& _x, float&  _y) {
 		_x = x;
