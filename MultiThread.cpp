@@ -20,6 +20,7 @@ struct V2
 		m.unlock();
 	}
 	void Get(float& _x, float&  _y) {
+		std::lock_guard<std::mutex> lock(m);
 		_x = x;
 		_y = y; 
 	}
